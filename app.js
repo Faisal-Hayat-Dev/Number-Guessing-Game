@@ -42,7 +42,7 @@ guess_btn.addEventListener("click", function () {
 let playAgainBtn = document.querySelector(".play-agin button");
 
 playAgainBtn.addEventListener("click", function () {
-    generate_num = Math.floor(Math.random() * 100) + 1;
+    generate_num = Math.floor(Math.random() * 10) + 1;
     document.getElementById("input").value = "";
     result_para.textContent = "";
     document.querySelector(".congrat").style.display = "none";
