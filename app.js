@@ -2,7 +2,7 @@ let input = document.getElementById("input")
 let congrat = document.querySelector(".congrat");
 let guess_btn = document.getElementById("guess_btn")
 let result_para = document.getElementById("result_para")
-let generate_num = Math.floor(Math.random() * 100) + 1;
+let generate_num = Math.floor(Math.random() * 10) + 1;
 
 guess_btn.addEventListener("click", function () {
     let guess_num = document.getElementById("input").value
@@ -14,8 +14,8 @@ guess_btn.addEventListener("click", function () {
         return
     }
 
-    else if (guess_num < 0 || guess_num > 100) {
-        result_para.textContent = "Number Muest be between (1 to 100)"
+    else if (guess_num < 0 || guess_num > 10) {
+        result_para.textContent = "Number Must be between (1 to 10)"
         input.style.border = "2px solid #C10000"
         return
     }
@@ -25,7 +25,6 @@ guess_btn.addEventListener("click", function () {
         result_para.setAttribute("class", "red")
 
     }
-
     else if (guess_num < generate_num) {
         result_para.textContent = "to Small"
         result_para.setAttribute("class", "yellow")
@@ -37,6 +36,7 @@ guess_btn.addEventListener("click", function () {
         result_para.setAttribute("class", "green")
     }
     input.style.border = ""
+
 })
 
 let playAgainBtn = document.querySelector(".play-agin button");
